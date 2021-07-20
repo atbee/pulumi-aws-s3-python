@@ -23,5 +23,13 @@ bucket = s3.Bucket(
     ),
 )
 
+bucket_public_access_block = s3.BucketPublicAccessBlock("bucket-public-access-block",
+    bucket=bucket.id,
+    block_public_acls=True,
+    block_public_policy=True,
+    ignore_public_acls=True,
+    restrict_public_buckets=True,
+)
+
 # Output
 pulumi.export("bucket-name", bucket.id)
