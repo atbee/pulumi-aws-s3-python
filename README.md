@@ -1,4 +1,4 @@
-# Pulumi AWS S3 Python
+# Pulumi AWS S3 with Python
 
 Create and configure a new stack
 
