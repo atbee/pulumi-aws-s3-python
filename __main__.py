@@ -8,6 +8,7 @@ bucket_name = config.require("bucket-name")
 # Create AWS resources
 bucket = s3.Bucket(
     bucket_name,
+    acl="private",
     bucket=bucket_name,
 )
 
