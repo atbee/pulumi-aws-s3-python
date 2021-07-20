@@ -1,2 +1,4 @@
+encryptionsalt: v1:m+vveRSDLVk=:v1:74nIuopsJZveOgMw:XvJ2QvF2cUN2kd/ARxaR03A7RwR5rg==
 config:
   aws:region: ap-southeast-1
+  pulumi-aws-s3-python:bucket-name: atbee-bucket
