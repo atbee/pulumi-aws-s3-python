@@ -5,7 +5,7 @@ from pulumi_aws import s3
 config = pulumi.Config()
 bucket_name = config.require("bucket-name")
 
-# Create AWS resources
+# Create AWS S3 bucket resource
 bucket = s3.Bucket(
     bucket_name,
     acl="private",
@@ -17,6 +17,9 @@ bucket = s3.Bucket(
                 sse_algorithm="AES256",
             ),
         ),
+    ),
+    versioning=s3.BucketVersioningArgs(
+        enabled=True,
     ),
 )
 
