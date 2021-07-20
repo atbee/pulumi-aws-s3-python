@@ -1,0 +1,6 @@
+name: pulumi-aws-s3-python
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: An AWS Python Pulumi - S3
