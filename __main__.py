@@ -4,6 +4,7 @@ from pulumi_aws import s3
 
 config = pulumi.Config()
 bucket_name = config.require("bucket-name")
+environment = config.require("environment")
 
 # Create AWS S3 bucket resource
 bucket = s3.Bucket(
@@ -18,6 +19,11 @@ bucket = s3.Bucket(
             ),
         ),
     ),
+    tags={
+        "Environment": environment,
+        "ProductArea": "Storage",
+        "Team": "Atbee",
+    },
     versioning=s3.BucketVersioningArgs(
         enabled=True,
     ),
