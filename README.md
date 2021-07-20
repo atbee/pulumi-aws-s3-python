@@ -5,6 +5,8 @@ Create and configure a new stack
 ```sh
 pulumi stack init s3
 pulumi config set aws:region ap-southeast-1
+pulumi config set pulumi-aws-s3-python:bucket-name <value>
+pulumi config set pulumi-aws-s3-python:environment <value>
 ```
 
 Preview and run the deployment
